@@ -3,7 +3,7 @@
 git_repo: https://github.com/jordemm/TestProject.git
 
 project_name: TestProject
-application_name: TestApp
+application_name: TestProject
 
 ssl_crt: |
   -----BEGIN CERTIFICATE-----
