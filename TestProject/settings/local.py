@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-print (BASE_DIR)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'TestProject.urls'
 
 TEMPLATES = [
@@ -67,8 +68,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = '../TestProject.wsgi.application'
-print(WSGI_APPLICATION)
+WSGI_APPLICATION = 'TestProject.wsgi.application'
+
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -118,3 +119,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static', 'static_dirs'),
+)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+
+MEIDA_URL = '/media/'
+
