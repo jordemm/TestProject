@@ -28,3 +28,14 @@ DATABASES = {
         'PORT': os.getenv('DATABASE_PORT', '5432'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#          'NAME': 'apmitalia_db',
+#          'USER': 'apmitalia',
+#          'PASSWORD': 'Jes17us.20',
+#          'HOST': '127.0.0.1',
+#          'PORT': '5432',
+#     }
+# }

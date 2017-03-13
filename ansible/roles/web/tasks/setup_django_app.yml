@@ -13,6 +13,11 @@
   when: run_django_syncdb is defined and run_django_syncdb
   tags: django.syncdb
 
+- name: Make executable
+  file:
+    path: "{{ project_path }}/manage.py"
+    mode: 0777
+
 - name: Run Django database migrations
   django_manage:
     command: migrate
@@ -32,3 +37,8 @@
   environment: "{{ django_environment }}"
   when: run_django_collectstatic is defined and run_django_collectstatic
   tags: django.collectstatic
+
+#- name: Create an initial superuser.
+#  django_manage:
+#    command: "createsuperuser --noinput --username=jordan --email=admin@example.com"
+#    app_path: "{{ project_path }}"
