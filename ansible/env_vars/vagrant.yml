@@ -20,11 +20,11 @@ gunicorn_num_workers: 3
 # when developing. Set to 0 for unlimited requests (default).
 gunicorn_max_requests: 0
 
-gunicorn_timeout_seconds: 300
+gunicorn_timeout_seconds: 10
 
 
 # Nginx settings.
-nginx_server_name: 10.55.55.55
+nginx_server_name: 192.168.33.15
 nginx_strong_dh_group: no
 
 
