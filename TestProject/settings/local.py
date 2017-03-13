@@ -13,3 +13,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 
 from .base import *
+
+
+# DEBUG = True
+ALLOWED_HOSTS = ['10.55.55.55']
