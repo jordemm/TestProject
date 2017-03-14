@@ -11,4 +11,31 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+
 from .base import *
+
+
+# DEBUG = True
+ALLOWED_HOSTS = ['10.55.55.55', '192.168.33.15', '192.168.0.92']
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('DATABASE_NAME', 'TestProject'),
+        'USER': os.getenv('DATABASE_USER', 'TestProject'),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD', 'password'),
+        'HOST': os.getenv('DATABASE_HOST', '127.0.0.1'),
+        'PORT': os.getenv('DATABASE_PORT', '5432'),
+    }
+}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#          'NAME': 'apmitalia_db',
+#          'USER': 'apmitalia',
+#          'PASSWORD': 'Jes17us.20',
+#          'HOST': '127.0.0.1',
+#          'PORT': '5432',
+#     }
+# }

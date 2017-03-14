@@ -1,9 +1,9 @@
 from .base import *
 
 
-# try:
-#     from .settings import local
-#     print ('local imported')
-# except:
-#     from .settings import production
-#     print ('production imported')
+try:
+    from .production import *
+    print ('local imported')
+except:
+    from .local import *
+    print ('production imported')
