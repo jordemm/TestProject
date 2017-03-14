@@ -3,7 +3,7 @@ from .base import *
 
 try:
     from .production import *
-    print ('local imported')
+    print ('production imported')
 except:
     from .local import *
-    print ('production imported')
+    print('local imported')
