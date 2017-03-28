@@ -15,8 +15,15 @@
   roles:
     - base
     - db
-#    - db2
     - rabbitmq
     - web
     - celery
     - nginx
+
+#    - db2
+
+#- name: Begin mysql installation
+#  hosts: all
+#  become: yes
+#  roles:
+#     - { role: ansible-role-mysql, mysql_root_password: 'rootpass' }
